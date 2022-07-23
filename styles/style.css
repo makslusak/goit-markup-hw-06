@@ -879,10 +879,9 @@ ul {
     border-radius: 4px;
     padding: 12px 16px;
     margin-bottom: 20px;
+    resize: none;
 }
 
-.modal__list {
-}
 .modal__item {
     display: flex;
     flex-direction: column;
@@ -892,6 +891,7 @@ ul {
     display: flex;
     flex-direction: column;
 }
+
 .modal__check-container {
     margin-bottom: 30px;
 }
