@@ -797,6 +797,10 @@ ul {
     transform: translate(-50%, -50%) scale(1);
     width: 528px;
     height: 581px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -833,4 +837,89 @@ ul {
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.7);
+}
+
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--titles-color);
+    margin-bottom: 12px;
+}
+
+.modal__form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__form-container label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.modal__input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 448px;
+    height: 40px;
+    padding: 12px 16px 12px 42px;
+}
+
+.modal__text {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.modal__list {
+}
+.modal__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.modal__textarea-container {
+    display: flex;
+    flex-direction: column;
+}
+.modal__check-container {
+    margin-bottom: 30px;
+}
+
+.checkbox__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--acent-color);
+}
+
+.modal__btn {
+    background: var(--acent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+    background-color: #188ce8;
 }
