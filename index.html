@@ -389,25 +389,40 @@
                     <ul class="modal__list">
                         <li class="modal__item">
                             <label for="name">Ім'я</label>
-                            <input class="modal__input" type="name" name="name" id="name" autocomplete="name">
+                            <input class="modal__input" type="name" name="name" id="name" autocomplete="name" placeholder=" ">
+                            <svg width="18px" height="18px" class="modal__icon">
+                                <use href="./images/icons.svg#formperson"></use>
+                            </svg>
                         </li>
                         <li class="modal__item">
                             <label for="phone">Телефон</label>
-                            <input class="modal__input" type="phone" name="phone" id="phone" autocomplete="tel">
+                            <input class="modal__input" type="phone" name="phone" id="phone" autocomplete="tel" placeholder=" ">
+                            <svg width="18px" height="18px" class="modal__icon">
+                                <use href="./images/icons.svg#formphone"></use>
+                            </svg>
                         </li>
                         <li class="modal__item">
                             <label for="email">Пошта</label>
-                            <input class="modal__input" type="email" name="email" id="email" autocomplete="email">
+                            <input class="modal__input" type="email" name="email" id="email" autocomplete="email" placeholder=" ">
+                            <svg width="18px" height="18px" class="modal__icon">
+                                <use href="./images/icons.svg#formemail"></use>
+                            </svg>
                         </li>
                     </ul>
                     <div class="modal__textarea-container">
                         <label for="comment">Коментар</label>
-                        <textarea placeholder="Введіть текст" class="modal__text" name="comment" id="comment">
+                        <textarea placeholder="Введiть текст" class="modal__text" name="comment" id="comment">
                         </textarea>
                     </div>
                     <div class="modal__check-container">
-                        <input type="checkbox" name="agreement" id="agreement">
-                        <label for="agreement">Погоджуюся з розсилкою та приймаю <a class="checkbox__link" href="#">Умови договору</a></label>
+                        
+                        <input class="checkbox visually-hidden" type="checkbox" name="agreement" id="agreement">
+                        <span class="modal__check--custom">
+                            <svg class="modal__check-icon" width="16px" height="15px">
+                                <use href="./images/icons.svg#formchecked"></use>
+                            </svg>
+                        </span>
+                        <label class="modal__check-label" for="agreement">Погоджуюся з розсилкою та приймаю <a class="modal__check-link" href="#">Умови договору</a></label>
                     </div>
                     <button class="modal__btn" type="submit">Відправити</button>
                     

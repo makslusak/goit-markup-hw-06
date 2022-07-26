@@ -643,6 +643,10 @@ ul {
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer__btn-img {
+    margin-left: 10px;
+}
+
 .footer__btn:hover,
 .footer__btn:focus {
     color: var(--acent-color);
@@ -855,7 +859,7 @@ ul {
     align-items: center;
 }
 
-.modal__form-container label {
+.modal__form-container label:not(:last-child) {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -872,6 +876,15 @@ ul {
     padding: 12px 16px 12px 42px;
 }
 
+.modal__input:focus + .modal__icon,
+.modal__input:not(:placeholder-shown) + .modal__icon {
+    fill: var(--acent-color);
+}
+
+.modal__input:focus {
+    outline: 1px solid var(--acent-color);
+}
+
 .modal__text {
     width: 448px;
     height: 120px;
@@ -882,27 +895,77 @@ ul {
     resize: none;
 }
 
+.modal__text:focus {
+    outline: 1px solid var(--acent-color);
+}
+
 .modal__item {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    position: relative;
 }
+
+.modal__icon {
+    position: absolute;
+    transform: translate(12px, 30px);
+}
+
 .modal__textarea-container {
     display: flex;
     flex-direction: column;
 }
 
-.modal__check-container {
-    margin-bottom: 30px;
+.modal__text::placeholder {
+    color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox__link {
+.modal__check-container {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.modal__check--custom {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    background-image: url(../images/formcheck.svg);
+    background-size: cover;
+    background-origin: border-box;
+    margin-right: 9px;
+}
+
+.modal__check-icon {
+    display: block;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .modal__check--custom > .modal__check-icon {
+    opacity: 1;
+}
+
+.checkbox:focus + .modal__check--custom {
+    outline: 1px solid var(--acent-color);
+}
+
+.modal__check-link {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--acent-color);
+}
+
+.modal__check-container > .modal__check-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
 }
 
 .modal__btn {
